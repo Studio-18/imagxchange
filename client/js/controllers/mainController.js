@@ -30,7 +30,7 @@ function MainController($state, authFactory, $rootScope){
 	function getUser(){
 		authFactory.getUser()
 		.then(function(response){
-			console.log(response)
+			console.log("RESPONSE", response)
 		})
 	}
 

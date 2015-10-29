@@ -1,22 +1,22 @@
-<div class="container">
-	<h1>imagXchange Gallery</h1>
-</div>
+<div ng-controller="PhotosController as photoCtrl">	
+	<div class="container">
+		<h1>imagXchange Gallery</h1>
+	</div>
+	
+	<div class="container">
+		<ul ng-repeat="photo in photoCtrl.all">
 
+			<li>Title: {{photo.title}}</li>
+			<li>Caption: {{photo.caption}}</li>
+			<li>Subject: {{photo.subject}}</li>
+			<li>Location: {{photo.location}}</li>
+			<li>Date take: {{photo.datetaken}}</li>
+			<li>Current price: {{photo.price}}</li>
+			<li>Photo id: {{photo._id}}</li>
 
-<div class="container">
-	<ul ng-repeat="photo in photoCtrl.all">
-
-		<li>Title: {{photo.title}}</li>
-		<li>Caption: {{photo.caption}}</li>
-		<li>Subject: {{photo.subject}}</li>
-		<li>Location: {{photo.location}}</li>
-		<li>Date take: {{photo.datetaken}}</li>
-		<li>Current price: {{photo.price}}</li>
-		<li>Photo id: {{photo._id}}</li>
-
-		<button class='view' ng-click="photoCtrl.viewPhotos(photo._id)">View</button>
-		<!-- <button class='delete' ng-click="photos.deletePhoto(photo)">Delete</button> -->
-
-	</ul>
-	<br>
+			<button class='view' ng-click="photoCtrl.photosShow(photo._id)">View</button>
+			<!-- <button class='delete' ng-click="photos.deletePhoto(photo)">Delete</button> -->
+		</ul>
+		<br>
+	</div>
 </div>

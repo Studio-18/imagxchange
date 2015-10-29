@@ -38,14 +38,12 @@ function MainRouter($stateProvider, $urlRouterProvider){
 			url: '/gallery',
 			templateUrl: 'templates/gallery.html'
 		})
+		
 		.state('contact', {
 			url: '/contact',
 			templateUrl: 'templates/contact.html'
 		})
-		.state('photo', {
-			url: '/photo',
-			templateUrl: 'templates/photo.html'
-		})
+		
 		.state('photos', {
 		 	url: '/photos/:id',
 		 	templateUrl: 'templates/photo.html'

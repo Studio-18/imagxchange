@@ -1,23 +1,33 @@
-<div class="container">
-	<h1>imagXchange Gallery</h1>
-</div>
+<div ng-controller="PhotosController as photoCtrl"></div>
+	<div class="container">
+		<h1>imagXchange Gallery</h1>
+	</div>
 
 
-<div class="container">
-	<ul ng-model="photoCtrl.photo">
+	<div class="container">
+		<ul ng-model="photoCtrl.vm.photo">
 
-		<li>Title: {{photoCtrl.photo.title}}</li>
-		<li>Caption: {{photoCtrl.photo.caption}}</li>
-		<li>Subject: {{photoCtrl.photo.subject}}</li>
-		<li>Location: {{photoCtrl.photo.location}}</li>
-		<li>Date take: {{photoCtrl.photo.datetaken}}</li>
-		<li>Staring price: {{photoCtrl.photo.startingprice}}</li>
-		<li>Current price: {{photoCtrl.photo.currentprice}}</li>
-		<li>Photo id: {{photoCtrl.photo._id}}</li>
+			<li>Title: {{photo}}</li>
+			<li>Caption: {{photo.caption}}</li>
+			<li>Subject: {{photoCtrl.subject}}</li>
+			<li>Location: {{photoCtrl.vm.photo.location}}</li>
+			<li>Date take: {{photoCtrl.photo.datetaken}}</li>
+			<li>Staring price: {{photoCtrl.photo.startingprice}}</li>
+			<li>Current price: {{photoCtrl.photo.currentprice}}</li>
+			<li>Photo id: {{photoCtrl.photo._id}}</li>
 
-		<button id='buy' ng-click="photoCtrl.buyPhoto(photoCtrl.photo._id)">BUY</button>
-		<!-- <button class='delete' ng-click="photos.deletePhoto(photo)">Delete</button> -->
+			<button id='buy' ng-click="photoCtrl.buyPhoto(photoCtrl.photo._id)">BUY</button>
+			<!-- <button class='delete' ng-click="photos.deletePhoto(photo)">Delete</button> -->
 
-	</ul>
-	<br>
-</div>
+		</ul>
+		<br>
+	</div>
+
+    <div class="container">
+
+    
+        <div>
+            <svg id="visualisation" width="1000" height="500"></svg>
+        </div>
+    </div>
+
