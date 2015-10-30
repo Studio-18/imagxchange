@@ -79,6 +79,21 @@ PhotoController.prototype.showPhotos = function(id) {
             initChart()
         };
 
+    vm.getTweets = function(){
+        console.log('lets tweet')
+        vm.$http
+        
+        .get("http://localhost:8000/")
+        
+        .then( response => {
+
+            vm.tweets = response.data 
+
+
+            console.log (response.data)
+        })
+    }    
+
     console.log( "showPhotos function is running", id)
 
     vm.$http
@@ -111,6 +126,36 @@ PhotoController.prototype.showPhotos = function(id) {
 
         })
 }
+
+    function tweetUpdate($http){
+    
+    var vm = this
+   
+    console.log("tweet is firing")
+
+    vm.$http
+        .get("http://localhost:8000/")
+        
+        .then(function(data){
+    
+    
+    }) 
+
+        // vm.$http(req)
+
+        // .then( function(response){
+        //     console.log('promise')
+        //     console.log('time :' + response.data.statuses[14].created_at)
+        //     console.log('time :' + response.data.statuses[0].created_at)
+
+        //     var firstTweet = response.data.statuses[14].parseInt.created_at
+        //     var lastTweet = response.data.statuses[0].parseInt.created_at
+
+        //     var elapsedtime = parseInt(firstTweet) - parseInt(lastTweet)
+        //     console.log("difference " + elapsedtime)
+
+        // })
+    }
 
 
     function initChart() {
@@ -177,55 +222,40 @@ PhotoController.prototype.showPhotos = function(id) {
 
 PhotoController.prototype.showPhoto = function(id) {
 	var vm = this
+    newpass = true
+    tweetUpdate()
+   
+
 	console.log( "showPhotos function is running", id)
+
 	vm.$http
 		.get( "http://localhost:8080/api/photos/" + id )
 		.then( response => {
 
         	vm.photo = response.data
-        	console.log(vm.photo)  
-        	//yaxisdata = vm.photo.pricehistory
+
+            console.log("vmphoto:", vm.photo)
+        	
+        	
         	for (i = 0; i < vm.photo.pricehistory.length; i++){
         		xaxisdata.push(i)
         		yaxisdata.push(vm.photo.pricehistory[i])
         	}
-        	
-        	newpass = true
-        		console.log(vm.photo)
-        		console.log("yaxis", yaxisdata)
-        		console.log("xaxis", xaxisdata)
-        	window.location.href = "#/photos/" + response.data._id
-            tweetUpdate(vm)
 
+        	       
+    		
+    		console.log("yaxis", yaxisdata)
+    		console.log("xaxis", xaxisdata)
+        	window.location.href = "#/photos/" + response.data._id      
+         
         	})
+
+
+
 
 }
 
-    function tweetUpdate($httpProvider){
-        // var vm = this
-       
-        console.log("tweet is firing")
-        var req = {
-            method: 'GET',
-            url: 'https://api.twitter.com/1.1/search/tweets.json?q=%23britneyspears',
-            headers: { 
-                'Authorization' : 'Bearer AAAAAAAAAAAAAAAAAAAAABWEiQAAAAAAz4Ao8FFUzeFIfGYEclqaSiaXQ3c%3DgEvMMJxJ0xpl5lZspVbEXMoQXEjjXaobFdXpG4XddfWBmkYKNr'
-            }
-        }  
-        vm.$http(req)
-        .then( function(response){
-            console.log('promise')
-            console.log('time :' + response.data.statuses[14].created_at)
-            console.log('time :' + response.data.statuses[0].created_at)
 
-            var firstTweet = response.data.statuses[14].parseInt.created_at
-            var lastTweet = response.data.statuses[0].parseInt.created_at
-
-            var elapsedtime = parseInt(firstTweet) - parseInt(lastTweet)
-            console.log("difference " + elapsedtime)
-
-        })
-    }
 
 
 PhotoController.prototype.destroy = function(id) {
