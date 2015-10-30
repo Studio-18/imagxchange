@@ -221,6 +221,7 @@ PhotoController.prototype.showPhotos = function(id) {
                         })
                         .interpolate("basis");
 
+
                     vis.append('svg:path')
 
                         .attr('d', lineGen(data))

@@ -9,7 +9,7 @@ ul {
 }
 a {
 	color: #fff;
-	font-size: 26px;	
+	font-size: 20px;	
 }
 a:hover, a:focus {
 	text-decoration: none;
@@ -25,8 +25,13 @@ a:hover, a:focus {
 	
 }
 
+.navbar-header a {
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
 .navbump {
-	height: 80px;
+	/*height: 80px;*/
 }
 
 /*home*/
@@ -101,14 +106,14 @@ a:hover, a:focus {
 	}
 }
 
-.homeHeaderImg > ul > li:nth-child(1) {
+.homeHeaderImg > ul > li:nth-child(1) a {
 	position: absolute;
 	left: 40%;
 	font-size: 36px;
 	bottom: 100px;
 	font-family: 'Titillium Web', sans-serif;
 }
-.homeHeaderImg > ul > li:nth-child(2) {
+.homeHeaderImg > ul > li:nth-child(2) a {
 	position: absolute;
 	right: 40%;
 	font-size: 36px;
@@ -122,6 +127,7 @@ a:hover, a:focus {
 .homeHeaderImg a:hover {
 	transform: scale( 1.1 );
 }
+
 .overlay {
 	width: 100%;
 	height: 100%;
@@ -136,8 +142,8 @@ a:hover, a:focus {
 }
 
 /*Login */
-.rowLogin  {
-	margin-top: 50px;
+.Login  {
+	margin-top: 5px;
 	
 } 
 
@@ -150,8 +156,8 @@ a:hover, a:focus {
 }
 
 /*Sign Up*/
-.rowSignUp {
-	margin-top: 50px;
+.SignUp {
+	margin-top: 5px;
 }
 
 .signUpHeaderImg {
@@ -167,33 +173,173 @@ a:hover, a:focus {
 .jumbotron {
 	background: rgba( 255, 255, 255, .3 );
 	width: 100%;
+	height: 90vh;
+	margin-top: 50px;
 	border-radius: 0;
 	border: 1px solid #fff;
 	color: #000;
 	font-family: 'Titillium Web', sans-serif;
+	overflow: scroll;
 }
 
-/*Profile Upload Photo*/
 
-#profile {
+/*Upload Photo*/
+#uploadImageHeader {
+	background-color: black;
+}
+
+#uploadImageHeader {
+	background: url(http://k43.pbase.com/o6/74/669074/1/84827625.6fkHB3CX.DSC_9356.JPG) top center no-repeat fixed;
+	height: 120vh;
+	width: 100vw;
+	background-size: cover;
+	position: relative;
+}
+
+#uploadImageHeader a.ng-binding {
 	margin-left: 15px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #f2f2f2;
+
+
 }
 
-#profile h1 {
+#uploadImageHeader #logo {
+	margin-top: 65px;
 	margin-left: 20px;
+
 }
+
+#uploadImageHeader h1 {
+	margin-left: 15px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #f2f2f2;
+}
+
+#uploadForm fieldset {
+	margin-left: 20px;
+	color: #f2f2f2;
+	font-size: 20px;
+}
+
+#legend {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f2f2f2;
+
+}
+
+label {
+	font-family: 'Titillium Web', sans-serif;
+
+}
+
+/*Gallery Page*/
+/*.headerGallery {
+	background: url(http://www.desktopwallpaperhd.net/wallpapers/0/0/nikon-lens-nikkor-4944.jpg) top center no-repeat fixed;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	position: relative;
+}*/
+
+.headerGallery img#logo {
+	margin-top: 65px;
+	margin-left: 15px;
+
+}
+
+.headerGallery h1 {
+	font-family: 'Titillium Web', sans-serif;
+	margin-left: 15px;
+
+}
+
+
+
+/*Show Page*/
+#showPageImageHeader {
+	background: url(http://media4.popsugar-assets.com/files/2014/05/20/846/n/1922398/4111a900d1abc59c_490394673_10.fbshare/i/Blake-Lively-owned-red-carpet-Gucci-gown-opening.jpg) top center no-repeat fixed;
+	height: 180vh;
+	width: 100vw;
+	background-size: cover;
+	position: relative;
+}
+
+#showPageImageHeader {
+	margin-left: 15px;
+
+}
+
+#buy {
+	color: black;
+}
+
+#show-trends {
+	color: black;
+}
+
+#showPageImageHeader #logo {
+	margin-top: 65px;
+	margin-left: 25px;
+}
+
+#showPageImageHeader h1 {
+	margin-left: 20px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #f2f2f2;
+
+}
+
+#showPageImageHeader ul {
+	font-size: 20px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #f2f2f2;
+}
+
+#showPageImageHeader .ng-binding
 
 .picturePrice {
 	text-align: center;
 }
 
-form .progress {
-	line-height: 15px;
+.picturePrice h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #f2f2f2;
+
 }
 
+.contact {
+	background: url(http://pauleannareid.com/wp-content/uploads/2014/08/paparazzi-red-carpet-background-9.jpg) top center no-repeat fixed;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;	
 
-/*Profile Upload Photo*/
-#newPhoto {
-    font-size: .55em;
- }
+}
+.contact #logo {
+	position: absolute;
+	top: 20vh;
+	left: 50%;
+	margin-left: -115.5px;
+	z-index: 30;
+
+}
+
+.contact > h1{
+	margin-top: 80px;
+	font-size: 50px;
+	margin-left: 35px;
+	color: #f2f2f2;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.contact > p {
+	margin-top: 90px;
+	margin-left: 35px;
+	color: #f2f2f2;
+	font-size: 36px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
 
